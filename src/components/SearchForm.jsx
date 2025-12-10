@@ -16,7 +16,7 @@ export default function SearchForm({ onSearch }) {
             onSubmit={(values) => onSearch(values.city)}
             >
             {({ errors, touched}) => (
-                <Form className="flex p-4 items-center text-2xl gap-2 relative pb-1">
+                <Form className="flex w-full max-w-xl mx-auto px-3 md:px-6 items-center text-2xl gap-2 relative pb-1">
                     <Field name="city">
                         {({ field }) => (
                             <Input

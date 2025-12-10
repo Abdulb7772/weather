@@ -8,11 +8,11 @@ export default function Forecast({ items, unit }) {
   return (
     <div className="w-full">
       <h3 className="text-black text-sm font-semibold mb-4 uppercase tracking-wide">5-Day Forecast</h3>
-      <div className="grid grid-cols-5 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-5 md:grid-cols-3 lg:grid-cols-5 gap-2">
         {items.map((day) => (
           <div 
             key={day.dt} 
-            className="bg-blue-600/50 backdrop-blur-sm rounded-2xl p-4 flex flex-col items-center justify-center text-center hover:bg-blue-700/50 transition-colors"
+            className="bg-blue-600/50 backdrop-blur-lg rounded-2xl p-4 w-full items-center justify-center text-center hover:bg-blue-700/50 transition-colors"
           >
             <p className="text-black text-sm font-medium mb-3">
               {new Date(day.dt * 1000).toLocaleDateString("en-US", {
